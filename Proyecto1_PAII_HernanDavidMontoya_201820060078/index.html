@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA2_Proyecto1_HernanDavidMontoya_201820060078</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logotipo" src="Videos/logotipo.png" >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>Services</b>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
+            <li><a class="dropdown-item" href="branding.html">Branding</a></li>
+            <li><a class="dropdown-item" href="WebDesign.html">Web Design</a></li>
+            <li><a class="dropdown-item" href="webDeveloper.html">Web Development</a></li>
+            <li><a class="dropdown-item" href="uiUx.html">UI/UX</a></li>
+            <li><a class="dropdown-item" href="digitalAdvertising.htm">Digital Advertising</a></li>
+            <li><a class="dropdown-item" href="design.html">Design</a></li>
+          </ul>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="projects.htm">Projects</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="clients.html">Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="ourCulture.html">Our Culture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><b>Contacts</b></a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><b>&#x2706</b>(03)96635433</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">0402 919815</a>
+          </li>
+        </ul>  
+    </div>
+  
+</nav>
+<section>
+<div class="container-grid" >
+   <div >  
+     <p class="parrafo">/// <br>
+            We are a fully integrated creative brand, digital and experience agency with a team of in-house artists obsessed with making sure we deliver work that is meaningful, memorable and powerful.</p>
+   </div>
+   <div >
+     <video class="video" src="Videos/Charles Elena.mp4" controls></video>
+   </div>
+</div>
+</section>
+<section class="seccion-footer">
+ <footer>
+  <div class="footer-grid">
+    <div>
+      <a href=""><img class="imagen-linea" src="Videos/linea.jpg"></a>
+    </div>
+    <div>
+      <p class="parrafo-footer"><b> CONTACT</b>
+        <br><br>
+        <b>MELBOURNE</b> <br>
+        Level 5, 168 Lonsdale St, Melbourne VIC 3000
+        <br><br>
+        Studio:
+        +61 9663 5433
+        Sandy Tsindos:
+        + 61 402 919 8155
+        <br><br>
+        <b>LONDON</b>
+        24 North Road
+        London N7 9EA
+        <br><br>
+        Tony Michael:
+        +44 (0) 7798 638 649</p>
+    </div>
+    <div class="contenedor-formulario">
+      <form action="">
+        <h3 style="color: white;">We’re here to help build your brand. How can we help?</h3>
+        <input type="text" name="Name" placeholder="Your Name">
+        <input type="text" name="Number" placeholder="Best number to contact you">
+        <input type="text" name="email" placeholder="Your email">
+        <br>
+        <textarea name="mensaje" placeholder="How can we help?"></textarea>
+        <br>
+        <button type="submit" class="btn btn-dark" id="submit"> <b>Submit</b>  </button>
+      </form>
+    </div>
+  </div>
+
+ </footer> 
+</section>
+
+<section class="apis">
+    <script src="/js/apis.js"></script>
+    <button type="button" onclick="nuevoMensaje()" >Leer Mensaje</button>
+  <div id="contenedorMensaje">
+
+  </div>
+  <div id="contenedor-historico">
+
+  </div>
+</div>
+  <script>
+    function nuevoMensaje(){
+      const url = 'https://api.chucknorris.io/jokes/random';
+
+      fetch(url)
+      .then(response => response.json())
+      .then(data=> console.log(data));
+    }
+  </script>
+</section>
+</body>
+</html>
